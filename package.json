@@ -1,0 +1,29 @@
+{
+  "name": "react-essentials-start",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@infragistics/igniteui-react": "18.7.3",
+    "@infragistics/igniteui-react-core": "18.7.3",
+    "@infragistics/igniteui-react-grids": "18.7.3",
+    "@infragistics/igniteui-react-inputs": "18.7.3",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "igniteui-dockmanager": "^1.15.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^4.3.9"
+  },
+  "keywords": [],
+  "description": ""
+}
