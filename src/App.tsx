@@ -1,7 +1,7 @@
 import "./index.css";
 import { useEffect, useRef, useState } from "react";
 import { defineCustomElements } from 'igniteui-dockmanager/loader';
-import { IgcDockManagerComponent, IgcContentPane } from "igniteui-dockmanager";
+import { IgcDockManagerComponent, IgcPaneCloseEventArgs } from "igniteui-dockmanager";
 import { IgcDockManagerPaneType, IgcSplitPaneOrientation } from "igniteui-dockmanager";
 
 /* eslint-disable */
@@ -46,9 +46,13 @@ function App() {
       }
     };
 
-    dockManagerRef.current.addEventListener("paneClose", (ev) => {
+    const paneClose = (ev: CustomEvent<IgcPaneCloseEventArgs>) => {
       console.log(ev.detail);
-    });
+    };
+    dockManagerRef.current.addEventListener("paneClose", paneClose);
+    return () => {
+        dockManagerRef.current.removeEventListener("paneClose", paneClose);
+    };
   }, []);
 
   const createContentPane = (contentID: string, paneHeader: string): any => {
